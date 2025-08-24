@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Lead Capture</title>
+  <link rel="stylesheet" href="assets/css/lead.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <h2>Lead Capture</h2>
+      <p class="small">Provide your details to unlock the selected inventory.</p>
+      <form id="leadForm" novalidate>
+        <div class="row">
+          <div class="col">
+            <label>Project</label>
+            <input id="project" class="input" readonly>
+          </div>
+          <div class="col">
+            <label>Unit</label>
+            <input id="unit" class="input" readonly>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Are you Real Estate Partner?</label>
+            <div class="toggle">
+              <input type="checkbox" id="isAgent">
+              <span class="slider"></span>
+              <span class="label">No</span>
+            </div>
+          </div>
+          <div class="col">
+            <label>City</label>
+            <input id="city" class="input" placeholder="City">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Your Name *</label>
+            <input id="name" class="input" required placeholder="Full name">
+          </div>
+          <div class="col">
+            <label>Mobile Number *</label>
+            <input id="mobile" class="input" required inputmode="numeric" pattern="[0-9]{6,15}" placeholder="10+ digits">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Company Name</label>
+            <input id="company" class="input" placeholder="Company">
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" id="closeBtn" class="btn secondary">Close</button>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+        <div id="status" class="small" style="margin-top:8px"></div>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="assets/js/lead.js"></script>
+</body>
+</html>

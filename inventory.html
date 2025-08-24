@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Inventory</title>
+  <link rel="stylesheet" href="assets/css/inventory.css"/>
+</head>
+<body>
+  <div class="nav">
+    <div class="brand">🏢 Real Estate CRM</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="inventory.html" class="active">Inventory</a>
+    </nav>
+  </div>
+
+  <div class="wrap card">
+    <div class="hdr">
+      <div>
+        <h2>Inventory</h2>
+        <div class="small">Select a project to view matching units.</div>
+      </div>
+      <div class="actions">
+        <label>Project</label>
+        <select id="projectSelect" class="input"></select>
+        <button id="refreshBtn" class="btn">Refresh</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Project Type</th>
+            <th>Unit Number</th>
+            <th>Unit Size</th>
+            <th>Budget</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryBody"></tbody>
+      </table>
+      <div id="noData" class="small" style="display:none">No inventory for selected project.</div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div>© 2025 Real Estate CRM</div>
+    <div class="small">Inventory connected to Databse</div>
+  </footer>
+  <script type="module" src="assets/js/inventory.js"></script>
+</body>
+</html>
