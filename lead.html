@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Lead Capture</title>
+  <title>Happy to Know you</title>
   <link rel="stylesheet" href="assets/css/lead.css"/>
 </head>
 <body>
   <div class="wrap">
     <div class="box">
-      <h2>Lead Capture</h2>
+      <h2>Happy to Know you</h2>
       <p class="small">Provide your details to unlock the selected inventory.</p>
       <form id="leadForm" novalidate>
         <div class="row">
           <div class="col">
             <label>Project</label>
-            <input id="project" class="input" readonly>
+            <input id="project" class="input" readonly hidden>
           </div>
           <div class="col">
-            <label>Unit</label>
-            <input id="unit" class="input" readonly>
+            
+            <input id="unit" class="input" readonly hidden>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label>Are you Real Estate Partner?</label>
+            <label> Are you Real Estate Partner?</label>
             <div class="toggle">
               <input type="checkbox" id="isAgent">
               <span class="slider"></span>
@@ -53,8 +53,10 @@
           </div>
         </div>
         <div class="actions">
-          <button type="button" id="closeBtn" class="btn secondary">Close</button>
+          
           <button type="submit" class="btn">Submit</button>
+          <button type="button" id="closeBtn" class="btn secondary">Close</button>
+
         </div>
         <div id="status" class="small" style="margin-top:8px"></div>
       </form>
