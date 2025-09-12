@@ -191,7 +191,7 @@ const routes = {
   "costing102highrise": "costing-102-highrise.html",
   "costing102plotsnew": "costing-102-plotsnew.html",
   "costingterra": "costing-37d-terra.html",
-  "Costing102PlotsOLD": "costing-102-plotsOld.html",
+  "Costing102PlotsOLD": "costing-37d-terra.html",
 };
 
 // Find route
