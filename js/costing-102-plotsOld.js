@@ -155,7 +155,7 @@ async function init() {
       //breakdownEl.appendChild(makeRow("GST @5% on (Price + PLC)", fmtNumber(gst)));
       breakdownEl.appendChild(makeRow("PRFC + 18% GST", fmtNumber(prfc)));
       breakdownEl.appendChild(makeRow("IFMS (500/SqYD)", fmtNumber(ifms)));
-      breakdownEl.appendChild(makeRow("Interest Free Contingency Deposit (IFRCD - Fixed)", fmtNumber(rcd)));
+      breakdownEl.appendChild(makeRow("Interest Free Refundable Contingency Deposit (IFRCD - Fixed)", fmtNumber(rcd)));
       breakdownEl.appendChild(document.createElement("hr"));
       breakdownEl.appendChild(makeRow("Total (Indicative)", fmtNumber(grandTotal)));
     }
