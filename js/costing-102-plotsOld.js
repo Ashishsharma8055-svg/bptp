@@ -135,7 +135,6 @@ async function init() {
     // Cost calculations
     const price = priceRate * size; // Price = base rate * size
     const plc = plcRate * size;     // PLC amount
-    //const gst = 0.05 * (price + plc); // 5% GST on (Price + PLC)
     const prfc = 40000 * 1.18;      // PRFC + 18% GST (fixed base 25,000)
     const ifms = 500 * size;         // IFMS @50 per size unit
     const rcd = 150000;             // Refundable contingency (fixed)
@@ -164,24 +163,16 @@ async function init() {
     /* ----- Render Payment Plan (Box 3) ----- */
     const pct = (p) => (p / 100) * baseTotal;
     const bookingAmt = pct(10) + prfc;
-    const within30Amt = pct(15);
-    const within60Amt = pct(15);
-    const within90Amt = pct(15);
-    const within120Amt = pct(15);
-    const within150Amt = pct(15);
-    const within180Amt = pct(10);
+    const within30Amt = pct(10);
+    const within60Amt = pct(75);
     const possessionAmt = pct(5) + ifms + rcd;
 
     const paymentEl = document.getElementById("paymentList");
     if (paymentEl) {
       paymentEl.innerHTML = "";
       paymentEl.appendChild(makeRow("Booking Amount @10% + PRFC", fmtNumber(bookingAmt)));
-      paymentEl.appendChild(makeRow("Within 30 days @15%", fmtNumber(within30Amt)));
-      paymentEl.appendChild(makeRow("Within 60 days @15%", fmtNumber(within60Amt)));
-      paymentEl.appendChild(makeRow("Within 90 days @15%", fmtNumber(within90Amt)));
-      paymentEl.appendChild(makeRow("Within 120 days @15%", fmtNumber(within120Amt)));
-      paymentEl.appendChild(makeRow("Within 150 days @15%", fmtNumber(within150Amt)));
-      paymentEl.appendChild(makeRow("Within 180 days @10%", fmtNumber(within180Amt)));
+      paymentEl.appendChild(makeRow("Within 30 days @10%", fmtNumber(within30Amt)));
+      paymentEl.appendChild(makeRow("Within 60 days @75%", fmtNumber(within60Amt)));
       paymentEl.appendChild(makeRow("On Offer of Possession @5% + IFMS + IFRCD", fmtNumber(possessionAmt)));
     }
 
@@ -246,12 +237,8 @@ async function init() {
           // Payment plan table
           const payments = [
             ["Booking Amount @10% + PRFC", fmtNumber(bookingAmt)],
-            ["Within 30 days @15%", fmtNumber(within30Amt)],
-            ["Within 60 days @15%", fmtNumber(within60Amt)],
-            ["Within 90 days @15%", fmtNumber(within90Amt)],
-            ["Within 120 days @15%", fmtNumber(within120Amt)],
-            ["Within 150 days @15%", fmtNumber(within150Amt)],
-            ["Within 180 days @10%", fmtNumber(within180Amt)],
+            ["Within 30 days @10%", fmtNumber(within30Amt)],
+            ["Within 60 days @75%", fmtNumber(within60Amt)],
             ["On Offer of Possession @5% + IFMS + RCD", fmtNumber(possessionAmt)]
           ];
           const startY2 = doc.lastAutoTable ? doc.lastAutoTable.finalY + 14 : 400;
@@ -269,10 +256,6 @@ async function init() {
             bookingAmt,
             within30Amt,
             within60Amt,
-            within90Amt,
-            within120Amt,
-            within150Amt,
-            within180Amt,
             possessionAmt
           ].reduce((s, x) => s + safeNumber(x), 0);
           const ytot = doc.lastAutoTable ? doc.lastAutoTable.finalY + 12 : (startY2 + 160);
