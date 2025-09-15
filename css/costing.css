@@ -1,0 +1,9 @@
+.costing-main{max-width:1000px;margin:90px auto;padding:0 16px}.cost-header{text-align:center}.summary-grid{display:flex;gap:12px;justify-content:space-between}.breakdown .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.06)}.download-wrap{display:flex;justify-content:flex-end;margin:10px 0}
+.container{display:grid;grid-template-columns:1fr;gap:18px}
+.glass-card{padding:18px;border-radius:14px}
+#boxSummary{padding:14px 16px}
+#boxBreakdown{padding:14px 16px}
+#boxPlan{padding:14px 16px}
+.breakdown .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.06)}
+.breakdown .row .desc{color:#233}
+.breakdown .row .val{font-variant-numeric:tabular-nums}

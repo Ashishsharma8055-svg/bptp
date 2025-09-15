@@ -1,0 +1,4 @@
+function fmtNumber(n){
+  try{ const v = Math.round(Number(n)||0); return new Intl.NumberFormat('en-IN').format(v);}catch(e){return String(Math.round(Number(n)||0));}}
+
+import { apiPost } from './app.js'; async function init(){ const form=document.getElementById('adminForm'); form.addEventListener('submit', async (ev)=>{ ev.preventDefault(); const fd=new FormData(form); const obj={}; for(const [k,v] of fd.entries()) obj[k]=v; if(window.showLoader) showLoader('Saving project...'); const res = await apiPost({action:'addProject', data: obj}); if(window.hideLoader) hideLoader(); if(res && res.success) { alert('Saved'); form.reset(); } else alert('Save failed'); }); } document.addEventListener('DOMContentLoaded', init);

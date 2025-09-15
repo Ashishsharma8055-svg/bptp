@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Costing</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/costing.css" />
+</head>
+<body>
+
+  <!-- Global Loader -->
+  <div id="globalLoader" class="loader hidden">
+    <div class="loader-card">
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="loaderText">Preparing costing…</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <script src="js/nav.js"></script>
+
+  <!-- Main Content -->
+  <main class="costing-main">
+    <header class="cost-header">
+      <h1 id="projectTitle">Loading...</h1>
+    </header>
+
+    <div class="container">
+      <!-- Unit Summary -->
+      <section class="glass-card" id="boxSummary">
+        <h2>Unit Summary</h2>
+        <div class="summary-grid">
+          <div>Unit No: <strong id="uNo">-</strong></div>
+          <div>Size: <strong id="uSize">-</strong></div>
+          <div>Type: <strong id="uType">-</strong></div>
+        </div>
+      </section>
+
+      <!-- Cost Breakdown -->
+      <section class="glass-card" id="boxBreakdown">
+        <h2>Cost Breakdown</h2>
+        <div id="breakdownList" class="breakdown"></div>
+      </section>
+
+      <!-- Payment Plan -->
+      <section class="glass-card" id="boxPlan">
+        <h2>Payment Plan</h2>
+        <div id="paymentList" class="breakdown"></div>
+      </section>
+
+      <!-- Download Button -->
+      <div class="download-wrap">
+        <button id="downloadCostingPdf" class="btn primary">
+          ⬇️ Download PDF
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/costing-102-plotsnew.js"></script>
+  <script src="js/costing-download.js"></script>
+
+</body>
+</html>
