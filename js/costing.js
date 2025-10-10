@@ -158,7 +158,7 @@ async function init() {
       breakdownEl.appendChild(makeRow("IFMS (50 × Size)", fmtNumber(ifms)));
       breakdownEl.appendChild(makeRow("IRFCD (Fixed)", fmtNumber(rcd)));
       breakdownEl.appendChild(document.createElement("hr"));
-      breakdownEl.appendChild(makeRow("Total (Indicative)", fmtNumber(grandTotal)));
+      breakdownEl.appendChild(makeRow("Total Cost", fmtNumber(grandTotal)));
     }
 
     /* ----- Render Payment Plan (Box 3) ----- */

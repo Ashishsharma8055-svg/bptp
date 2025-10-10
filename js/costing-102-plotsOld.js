@@ -157,7 +157,7 @@ async function init() {
       breakdownEl.appendChild(makeRow("IFMS (500/SqYD)", fmtNumber(ifms)));
       breakdownEl.appendChild(makeRow("Interest Free Refundable Contingency Deposit (IFRCD - Fixed)", fmtNumber(rcd)));
       breakdownEl.appendChild(document.createElement("hr"));
-      breakdownEl.appendChild(makeRow("Total (Indicative)", fmtNumber(grandTotal)));
+      breakdownEl.appendChild(makeRow("Total Cost", fmtNumber(grandTotal)));
     }
 
     /* ----- Render Payment Plan (Box 3) ----- */

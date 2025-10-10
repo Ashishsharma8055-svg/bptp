@@ -134,7 +134,7 @@ async function init() {
       breakdownEl.appendChild(makeRow("IFMS (50/- )", fmtNumber(ifms)));
       //breakdownEl.appendChild(makeRow("Refundable Contingency Deposit (Fixed)", fmtNumber(rcd)));
       breakdownEl.appendChild(document.createElement("hr"));
-      breakdownEl.appendChild(makeRow("Total (Indicative)", fmtNumber(grandTotal)));
+      breakdownEl.appendChild(makeRow("Total Cost", fmtNumber(grandTotal)));
     }
 
     /* ----- Render Payment Plan (Box 3) ----- */
