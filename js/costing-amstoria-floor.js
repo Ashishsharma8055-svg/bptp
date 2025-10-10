@@ -214,7 +214,7 @@ async function init() {
           const payments = [
             ["Booking Amount @ 10% + PRFC", fmtNumber(bookingAmt)],
             ["Within 30 days @ 10%", fmtNumber(within30Amt)],
-            ["Within 90 days @ 75%", fmtNumber(within90Amt)],
+            ["Within 60 days @ 75%", fmtNumber(within90Amt)],
             ["On Offer of Possession @ 5% + IFMS", fmtNumber(possessionAmt)]
           ];
           const startY2 = doc.lastAutoTable ? doc.lastAutoTable.finalY + 14 : 400;
