@@ -193,6 +193,7 @@ const routes = {
   "costingterra": "costing-37d-terra.html",
   "costing102plotsold": "costing-102-plotsOld.html",
   "costing60daysfortuna": "costing-102-plotsOld.html",
+  "amstoriafloor": "costing-amstoria-floor.html",
 };
 
 // Find route
