@@ -114,11 +114,11 @@ async function init() {
 
     // Calculations (adjust as required)
     const price = priceRate * size;        // Rate × Size
-    const gst = 0.05 * price ;      // GST 5%
+    //const gst = 0.05 * price ;      // GST 5%
     const prfc = 20000 * 1.18;             // fixed PRFC (20000 + 18% GST)
     const ifms = 50 * size;                // IFMS rate * size
-    const baseTotal = price + gst;   // base for payment splits
-    const grandTotal = price + gst + prfc + ifms;
+    const baseTotal = price;   // base for payment splits
+    const grandTotal = price + prfc + ifms;
 
     /* ----- Render Cost Breakdown (Box 2) ----- */
     const breakdownEl = document.getElementById("breakdownList");
@@ -129,7 +129,7 @@ async function init() {
       breakdownEl.appendChild(document.createElement("hr"));
       // Calculated totals
       breakdownEl.appendChild(makeRow("Base Cost", fmtNumber(price)));
-      breakdownEl.appendChild(makeRow("GST @5%", fmtNumber(gst)));
+      //breakdownEl.appendChild(makeRow("GST @5%", fmtNumber(gst)));
       breakdownEl.appendChild(makeRow("PRFC + 18% GST", fmtNumber(prfc)));
       breakdownEl.appendChild(makeRow("IFMS (50/- )", fmtNumber(ifms)));
       //breakdownEl.appendChild(makeRow("Refundable Contingency Deposit (Fixed)", fmtNumber(rcd)));
@@ -195,7 +195,7 @@ async function init() {
           const breakdownRows = [
             ["Base Price", fmtNumber(priceRate)],
             ["Base Cost ", fmtNumber(price)],
-            ["GST @5%", fmtNumber(gst)],
+            //["GST @5%", fmtNumber(gst)],
             ["PRFC + 18% GST", fmtNumber(prfc)],
             ["IFMS", fmtNumber(ifms)],
             ["Total (Indicative)", fmtNumber(grandTotal)]
