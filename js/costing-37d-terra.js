@@ -155,6 +155,9 @@ async function init() {
       const paymentTotal = bookingAmt + within30Amt + within60Amt + possessionAmt;
       paymentEl.appendChild(document.createElement("hr"));
       paymentEl.appendChild(makeRow("Total (Payment Plan)", fmtNumber(paymentTotal)));
+
+      paymentEl.appendChild(document.createElement("hr"));
+      paymentEl.appendChild(makeRow("This cost sheet is only for reference purpose. Kindly verify with Team BPTP."));
     }
 
     /* ----- Download PDF binding (guarded) ----- */
