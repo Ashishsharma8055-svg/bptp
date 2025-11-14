@@ -10,7 +10,7 @@ async function load(){
   let data = [];
   try{ data = await apiGet('projects') || []; }catch(e){ console.error(e); data = []; }
   data.sort((a,b)=> (a['Project Name']||'').toLowerCase().localeCompare((b['Project Name']||'').toLowerCase()));
-  if(!data.length){ container.innerHTML = '<div class="center" style="padding:24px;color:#345a6d">No projects found.</div>'; if(window.hideLoader) hideLoader(); return; }
+  if(!data.length){ container.innerHTML = '<div class="center" style="padding:24px;color:#345a6d">No projects found./ Try using Refresh this page or May be No details Availble to show.</div>'; if(window.hideLoader) hideLoader(); return; }
   data.forEach((p, idx)=>{
     const name = p['Project Name'] || `Project ${idx+1}`;
     const location = p['Location'] || p['City'] || '';
