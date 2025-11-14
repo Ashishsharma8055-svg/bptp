@@ -143,7 +143,7 @@ function renderTable(rows) {
   tbody.innerHTML = "";
 
   if (!rows || rows.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6">No units or Kindly refresh this page again.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6">No units</td></tr>`;
     return;
   }
 
